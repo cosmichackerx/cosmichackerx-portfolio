@@ -1,0 +1,174 @@
+body {
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    animation: pulseGlow 3s infinite alternate;
+}
+
+/* Logo Animation */
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 5px cyan);}
+    100% { filter: drop-shadow(0 0 20px cyan);}
+}
+
+/* Hero Section */
+.hero {
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2), rgba(0, 255, 255, 0));
+    padding: 50px;
+    margin-top: 20px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    animation: colorShift 5s infinite alternate;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.explore-btn {
+    background-color: black;
+    color: cyan;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.explore-btn:hover {
+    box-shadow: 0px 0px 20px cyan;
+}
+
+/* Featured Projects */
+.featured-projects {
+    margin-top: 50px;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: black;
+    opacity: 0.8;
+}
+
+/* Glowing Header */
+.glowing-text {
+    font-size: 40px;
+    position: relative;
+    padding: 20px;
+    display: inline-block;
+    animation: glowPulse 3s infinite alternate;
+}
+
+/* Glowing effect */
+@keyframes glowPulse {
+    0% { text-shadow: 0px 0px 10px cyan;}
+    100% { text-shadow: 0px 0px 20px cyan, 0px 0px 30px blue;}
+}
+
+/* Particle Canvas */
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+.glitch {
+    position: relative;
+    color: cyan;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: glitch 1s infinite, neonFlicker 2s infinite alternate;
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px #0ff;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    color: cyan;
+    z-index: -1;
+  }
+  
+  .glitch::before {
+    animation: glitchTop 1s infinite;
+    color: #f0f;
+  }
+  
+  .glitch::after {
+    animation: glitchBottom 1.5s infinite;
+    color: #0ff;
+  }
+  
+  /* Glitch Keyframes */
+  @keyframes glitch {
+    0% { transform: none; }
+    20% { transform: skew(-0.5deg, -0.9deg); }
+    40% { transform: skew(0.8deg, 0.3deg); }
+    60% { transform: skew(-1deg, -0.2deg); }
+    80% { transform: skew(0.3deg, 1deg); }
+    100% { transform: none; }
+  }
+  
+  @keyframes glitchTop {
+    0%, 100% { clip-path: inset(0 0 90% 0); transform: translate(-2px, -2px); }
+    50% { clip-path: inset(0 0 10% 0); transform: translate(2px, 2px); }
+  }
+  
+  @keyframes glitchBottom {
+    0%, 100% { clip-path: inset(90% 0 0 0); transform: translate(2px, 2px); }
+    50% { clip-path: inset(10% 0 0 0); transform: translate(-2px, -1px); }
+}
+
+/* Neon Flicker */
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px #0ff; }
+  50% { opacity: 0.8; text-shadow: 0 0 2px #0ff; }
+  80% { opacity: 0.5; text-shadow: none; }
+}

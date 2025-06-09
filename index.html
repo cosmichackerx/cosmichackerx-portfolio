@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmicHackerX Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="cosmicarmyx.jpeg" alt="CosmicHackerX Logo" class="logo">
+        </div>
+        <h1 class="glitch flicker" data-text="Welcome to CosmicHackerX Portfolio">Welcome to CosmicHackerX Portfolio</h1>
+
+    </header>
+
+    <canvas id="particleCanvas"></canvas> <!-- Particle Effects -->
+
+    <nav>
+        <button class="glow-btn" onclick="scrollToSection('home')">Home</button>
+        <button class="glow-btn" onclick="scrollToSection('projects')">Projects</button>
+        <button class="glow-btn" onclick="scrollToSection('about')">About</button>
+        <button class="glow-btn" onclick="scrollToSection('contact')">Contact</button>
+    </nav>
+    
+
+    <section class="hero">
+        <h2>Exploring the Cyber Universe</h2>
+        <p>Ethical hacking, security research, and digital transformation—all in one place.</p>
+        <button class="explore-btn">Start Your Journey</button>
+    </section>
+
+    <section id="projects" class="featured-projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Cyber Defense Suite</h3>
+                <p>Advanced penetration testing toolkit for ethical hackers.</p>
+            </div>
+            <div class="project">
+                <h3>AI-Powered Security Scanner</h3>
+                <p>Automated vulnerability detection with AI integration.</p>
+            </div>
+            <div class="project">
+                <h3>Deep Web Intelligence</h3>
+                <p>Collecting data from deep web for cybersecurity insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Connect with Me</h2>
+        <p>Follow my journey in cybersecurity and ethical hacking:</p>
+        <ul>
+            <li><a href="https://www.youtube.com/@cosmichackerx" target="_blank">YouTube</a></li>
+            <li><a href="https://github.com/cosmichackerx" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CosmicHackerX. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
